@@ -6,7 +6,7 @@
 - Event: [VKI OpenFOAM seminar](https://github.com/ofcourse-VKI/ofseminar/tree/master) - [announcement](https://events.vki.ac.be/index.php/von-karman-institute-events-and-lecture-series/free-openfoam-seminar-january-2025-gerasimos-chourdakis), online (Belgium)
 - Date: January 24, 2025
 
-[Start the presentation](https://makish.github.io/vki-training/) - [Get the PDF](https://github.com/MakisH/vki-training/blob/master/pdf-export/slides.pdf) (pending)
+[Start the presentation](https://makish.github.io/vki-training/) - [Get the PDF](https://github.com/MakisH/vki-training/blob/master/slides.pdf)
 
 This training session is an excerpt of the content typically discussed in the [preCICE Workshops](https://precice.org/precice-workshop.html). Do you want more training for you, your university, or your company? Consider [supporting preCICE](https://precice.org/community-support-precice).
 
