@@ -4,15 +4,39 @@
 
 vvv
 
-# Meet the people
+## Current PhD topics (TUM)
 
-![](images/closing/precice2023-group.jpg)
+- Gerasimos Chourdakis: Ecosystem, geometric multi-scale
+- Benjamin Rodenberg: Time interpolation
+- Frédéric Simonis: Dynamic coupling meshes
 
 vvv
 
-# Incoming Workshop
+## Current PhD topics (Univ. Stuttgart)
 
-![](images/closing/precice2024.svg)
+- David Schneider: Data mapping (GPUs, PoU RBF)
+- Ishaan Desai: Adaptive macro-micro simulations
+- Jun Chen: Porous media macro-micro simulations
+- Carme Homs Pons: Musculoskeletal multi-scale simulations (OpenDiHu)
+
+vvv
+
+## Further research and development
+
+- Coupling with Functional Mock-Up units
+- Non-mesh-related global data exchange
+- Volume coupling (overlapping domains)
+- Automatic acceleration configuration
+
+vvv
+
+# Meet the people
+
+<img src="images/closing//precice2024-group.jpg" style="max-height:400px;"/>
+
+vvv
+
+![](images/closing/precice2025-path.svg)
 
 
 ---
@@ -33,9 +57,9 @@ vvv
 </div>
 
 <div>
-  <small>Jun Chen(UST) + Gerasimos Chourdakis (UST/TUM) + many more (see <a href="https://www.precice.org/about/">precice.org/about</a>)</small>  
+  <small>Gerasimos Chourdakis (US/TUM), Jun Chen(US), + many more (see <a href="https://www.precice.org/about/">precice.org/about</a>)</small>  
 
   <img src="images/closing/QRCode.png" style="max-height:150px;"/></small>
   
-  <small><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br/> <a href="https://github.com/MakisH/ofw19-training">Get these slides</a>.</small>
+  <small><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br/> <a href="https://github.com/MakisH/vki-training">Get these slides</a>.</small>
 </div>

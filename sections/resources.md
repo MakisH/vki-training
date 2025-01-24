@@ -2,11 +2,23 @@
 
 vvv
 
+## Everything is open and user-centered
+
+- Developed in the open: `github.com/precice`
+- Documentation and many examples in one place
+- (Diamond) open-access publications
+- Public recordings of workshop talks
+- Open collaboration, issues, projects, feedback, ...
+
+Extra effort to maintain and update
+
+vvv
+
 ## Start here: precice.org
 
 <a href="https://www.precice.org/" title="preCICE homepage"><img data-src="images/resources/precice_org.png" style="border:none; box-shadow:none; height:450px;"></a>
 
-<small>Built & hosted on GitHub Pages.<br/>Last 7 days: 600+ visitors, 4k pageviews</small>
+<small>Built & hosted on GitHub Pages.<br/>Last 7 days: 700+ visitors, 4k pageviews</small>
 
 vvv
 
@@ -22,7 +34,7 @@ vvv
 
 <a href="https://precice.discourse.group/" title="preCICE forum on Discourse"><img data-src="images/resources/discourse.png" style="border:none; box-shadow:none; height:500px;"></a>
 
-<small>Active since October 2019, 480+ users, 7k posts in 800+ topics</small>
+<small>Active since October 2019, 500+ members</small>
 
 vvv
 
@@ -30,24 +42,20 @@ vvv
 
 <a href="https://www.youtube.com/c/preCICECoupling" title="preCICE channel on YouTube"><img data-src="images/resources/youtube.png" style="border:none; box-shadow:none; height:500px;"></a>
 
-<small>Active since 2020, 580+ subscribers, 50+ videos</small>
+<small>Active since 2020, 600+ subscribers, 50+ videos</small>
 
 vvv
 
-## Get news: Twitter
+## Further channels
 
-<a href="https://twitter.com/preCICE_org" title="preCICE on Twitter"><img data-src="images/resources/twitter.png" style="border:none; box-shadow:none; height:400px;"></a>
-
-<small>Active since 2018, 400+ followers<br/>also on `@precice@fosstodon.org`</small>
-
-vvv
-
-## Read more: OpenFOAM-preCICE paper
-
-<a href="https://doi.org/10.51560/ofj.v3.88" title="OpenFOAM Journal"><img data-src="images/resources/openfoam-precice-paper.png" style="border:none; box-shadow:none; height:400px;"></a>
+- Mastodon: https://fosstodon.org/@precice
+- Bluesky: https://bsky.app/profile/precice.org
+- LinkedIn: https://www.linkedin.com/groups/9073912/
+- RG: https://www.researchgate.net/project/preCICE
 
 vvv
 
-## Read more: preCICE paper
+## Related publications
 
-<a href="https://open-research-europe.ec.europa.eu/articles/2-51/v2" title="Open Research Europe"><img data-src="images/resources/precice-v2-paper.png" style="border:none; box-shadow:none; height:400px;"></a>
+<a href="https://doi.org/10.51560/ofj.v3.88" title="OpenFOAM Journal"><img data-src="images/resources/papers.png" style="border:none; box-shadow:none; max-height:400px;"></a>
+

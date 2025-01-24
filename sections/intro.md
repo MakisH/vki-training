@@ -32,35 +32,65 @@ vvv
 
 ![](images/intro/precice-features.png) 
 
+---
+
+## What people do with preCICE
+
 vvv
 
 ## What people do with preCICE (1)
 
-<video data-autoplay width="560" height="315" >
-  <source src="videos/FSI coupling for an undulation membrane tidal energy converter.mp4" type="video/mp4">
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/U9RonmPw76g?si=iRh0Qwdg_UWEjWbg&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Credit: Ulrich Heck, DHCAE Tools GmbH
+Credit: Ulrich Heck, DHCAE Tools GmbH (Germany)
 
 vvv
 
 ## What people do with preCICE (2)
 
-<video data-autoplay width="560" height="315">
-  <source src="videos/Particle impacts on flat plate with deformation (DEM+FEM).mp4" type="video/mp4">
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OUi8ogKEyAA?si=eFJl9iAIm4NDx5uE&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Credit: Prasad Adhav, Univ. of Luxembourg
+Credit: Prasad Adhav, Univ. of Luxembourg (Luxembourg)
 
 vvv
 
 ## What people do with preCICE (3)
 
-<video data-autoplay width="560" height="315">
-  <source src="videos/FSI coupling using OpenFOAM and preCICE for a free surface flow.mp4" type="video/mp4">
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/75cF410BsuU?si=5z4hhZdk3z9MdxQN&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Credit: Utkan Caliskan
+Credit: ESLAB Simulations. SNU (South Korea)
+
+vvv
+
+## What people do with preCICE (4)
+
+![](images/users/exafsa.png)
+
+ExaFSA SPPEXA program, TU Darmstadt (Germany)
+
+vvv
+
+## What people do with preCICE (5)
+
+<img data-src="images/users/nasa.png" style="border:none; box-shadow:none; max-height:400px;">
+
+A publication by NASA Glenn Research Center (USA)
+
+vvv
+
+## What people do with preCICE (6)
+
+![](images/users/awi.png)
+
+Ice-sheet simulations by AWI (Germany)
+
+vvv
+
+## What people do with preCICE (6)
+
+![](images/users/gymprecice.png)
+
+Active flow control with ML, Heriot-Watt University (UK)
 
 vvv
 
@@ -75,7 +105,7 @@ vvv
 
 <img src="images/closing/QRCode.png" style="max-height:450px;"/>
 
-<a href="https://github.com/MakisH/ofw19-training">github.com/MakisH/ofw19-training</a>
+<a href="https://github.com/MakisH/vki-training">github.com/MakisH/vki-training</a>
 
 vvv
 

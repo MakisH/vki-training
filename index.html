@@ -32,11 +32,12 @@
         
                 <!-- Title slide -->
                 <section>
-                    <small>19th OpenFOAM Workshop - Beijing, June 25-28, 2024</small>
-                    <h1>Getting started with<br/>OpenFOAM-preCICE<br/> for FSI simulations</h1>
+                    <small>von Karman Institute for Fluid Dynamics: OpenFOAM seminar, January 24, 2025</small>
+                    <h1>Coupling OpenFOAM with external codes via preCICE</h1>
                     <div style="margin-top:50pt">
                         <div>
-                            <small>Jun Chen & Gerasimos Chourdakis, University of Stuttgart<br/><a href="mailto:jun.chen@ipvs.uni-stuttgart.de">jun.chen@ipvs.uni-stuttgart.de</a></small><br/>
+                            <small>Gerasimos Chourdakis, University of Stuttgart<br/><a href="mailto:gerasimos.chourdakis@ipvs.uni-stuttgart.de">gerasimos.chourdakis@ipvs.uni-stuttgart.de</a></small><br/><br/>
+                            <small>Jun Chen, University of Stuttgart</small><br/>
                             <img data-src="images/logos/Uni_stuttgart_logo_english.svg" style="border:none; box-shadow:none; height:50px;">
                         </div>
                     </div>
@@ -61,7 +62,8 @@
                         - [preCICE Python bindings](https://precice.org/installation-bindings-python.html):
                            ```bash
                            pip3 install --upgrade pip
-                           pip3 install --user pyprecice
+                           python3 -m venv .venv && . .venv/bin/activate
+                           pip3 install pyprecice
                            ```
                         
                         ---
@@ -150,11 +152,11 @@
                 
                 <section>
                     <section>
-                        <p><a href="https://github.com/MakisH/ofw18-training/blob/master/videos/generator-propagator-uncoupled.mp4"><video data-autoplay src="videos/generator-propagator-uncoupled.mp4"></video></a></p>
+                        <p><video data-autoplay src="videos/generator-propagator-uncoupled.webm"></video></p>
                     </section>
                     <section>
                         <h2>Uncoupled simulation</h2>
-                        <p><a href="https://github.com/MakisH/ofw18-training/blob/master/videos/propagator_constant.webm"><video data-autoplay src="videos/propagator_constant.webm"></video></a></p>
+                        <p><video data-autoplay src="videos/propagator_constant.webm"></video></p>
                     </section>
                 </section>
                 
@@ -288,7 +290,7 @@
                 <!-- Initialize and finalize preCICE -->
                 <section data-auto-animate>
                     <h2>Initialize and finalize preCICE</h2>
-                    <pre data-id="code-animation"><code class="language-python" data-trim data-line-numbers="21-27|29,42">
+                    <pre data-id="code-animation"><code class="language-python" data-trim data-line-numbers="21-27|28,42">
                         import numpy
                         import precice
                         
@@ -335,7 +337,7 @@
                 <!-- Advance the coupling: focus -->
                 <section data-auto-animate>
                     <h2>Advance the coupling</h2>
-                    <pre data-id="code-animation"><code class="language-python" data-trim data-line-numbers="29,44|34-42">
+                    <pre data-id="code-animation"><code class="language-python" data-trim data-line-numbers="28,44|34-42">
                         import numpy
                         import precice
                         
@@ -584,8 +586,8 @@
                 <section>Not there yet, but let's run it<br/><small>(similar changes in <tt>propagator.py</tt> - try it at home)</small></section>
                 <section>
                     <h2>Nothing happening?</h2>
-                    <p><a href="https://github.com/MakisH/ofw18-training/blob/master/videos/propagator_constant.webm"><video data-autoplay src="videos/nothing happening.webm"></video></a></p>
-                    <small>Did we forget something?</small>
+                    <p><video data-autoplay src="videos/nothing happening.webm"></video></p>
+                    <small>Steering works. But did we forget something?</small>
                 </section>
                 </section>
                 <section>
@@ -706,8 +708,8 @@
                 <section>
                 <section>It should work now!</small></section>
                 <section>
-                  <p><a href="https://github.com/MakisH/ofw18-training/blob/master/videos/generator-propagator-uncoupled.mp4"><video
-                        data-autoplay src="videos/generator-propagator-coupled-new.webm"></video></a></p>
+                  <p><video
+                        data-autoplay src="videos/generator-propagator-coupled.webm"></video></p>
                 </section>
                 <section>
                     <h2>Data is being transfered!</h2>
@@ -841,7 +843,7 @@
                 <section>
                   <h2>Configure preCICE</h2>
                   <div class="col">
-                    <pre><code class="language-xml" data-trim data-line-numbers="1-2|4-12|14-30|14,18-19,30|14,20-24,30|39|41-47">
+                    <pre><code class="language-xml" data-trim data-line-numbers="1-2|4-12|14-30|14,18-19,30|14,20-24,30|39-40|42-48">
                       &lt;data:vector name="Force" /&gt;
                       &lt;data:vector name="Displacement" /&gt;
 
@@ -861,16 +863,16 @@
                         &lt;receive-mesh name="Solid-Mesh" from="Solid" /&gt;
                         &lt;write-data name="Force" mesh="Fluid-Mesh" /&gt;
                         &lt;read-data name="Displacement" mesh="Fluid-Mesh" /&gt;
-                        &lt;mapping:rbf-thin-plate-splines
-                          direction="write"
-                          from="Fluid-Mesh"
-                          to="Solid-Mesh"
-                          constraint="conservative" /&gt;
-                        &lt;mapping:rbf-thin-plate-splines
-                          direction="read"
-                          from="Solid-Mesh"
-                          to="Fluid-Mesh"
-                          constraint="consistent" /&gt;
+                        &lt;mapping:rbf direction="write"
+                          from="Fluid-Mesh" to="Solid-Mesh"
+                          constraint="conservative"&gt;
+                          &lt;basis-function:compact-polynomial-c6 support-radius="1." /&gt;
+                        &lt;/mapping:rbf&gt;
+                        &lt;mapping:rbf direction="read"
+                          from="Solid-Mesh" to="Fluid-Mesh"
+                          constraint="consistent"&gt;
+                          &lt;basis-function:compact-polynomial-c6 support-radius="1." /&gt;
+                        &lt;/mapping:rbf&gt;
                       &lt;/participant&gt;
 
                       &lt;participant name="Solid"&gt;
@@ -880,7 +882,8 @@
                         &lt;watch-point mesh="Solid-Mesh" name="Flap-Tip" coordinate="0.0;1" /&gt;
                       &lt;/participant&gt;
 
-                      &lt;m2n:sockets acceptor="Fluid" connector="Solid" exchange-directory=".." /&gt;
+                      &lt;m2n:sockets acceptor="Fluid" connector="Solid"
+                                   exchange-directory=".." /&gt; <!-- initial handshake -->
 
                       &lt;coupling-scheme:serial-explicit&gt;
                         &lt;participants first="Fluid" second="Solid" /&gt;
@@ -897,17 +900,17 @@
                 
                 <section>
                 <section>
-                  <p><a href="https://github.com/MakisH/ofw18-training/blob/master/videos/execution-serial-explicit.mp4"><video
-                        data-autoplay src="videos/execution-serial-explicit.mp4" style="max-height:800px;"></video></a></p>
+                  <p><video
+                        data-autoplay src="videos/execution-serial-explicit.mp4" style="max-height:800px;"></video></p>
                 </section>
                 <section>
-                  <p><a href="https://github.com/MakisH/ofw18-training/blob/master/videos/video-explicit.ogv"><img
-                        src="images/level3/screenshot-explicit.png" style="max-height:800px;"></img></a></p>
+                  <p><img
+                        src="images/level3/screenshot-explicit.png" style="max-height:800px;"></img></p>
                 </section>
                 <section>
                   <small>When we decrease the solid density further to 1, the participants have stronger coupling, then:</small>
-                    <p><a href="https://github.com/MakisH/ofw18-training/blob/master/videos/execution-serial-explicit.mp4"><video
-                          data-autoplay src="videos/se-ex.webm" style="max-height:800px;"></video></a></p>
+                    <p><video
+                          data-autoplay src="videos/se-ex.webm" style="max-height:800px;"></video></p>
                 </section>
                 <section>
                   <h2>What we did so far: serial-explicit scheme</h2>
@@ -938,13 +941,13 @@
                 </section>
                 <section>
                   <small>With solid density equal to 42:</small>
-                  <p><a href="https://github.com/MakisH/ofw18-training/blob/master/videos/execution-serial-explicit.mp4"><video
-                        data-autoplay src="videos/se-im-42.webm" style="max-height:800px;"></video></a></p>
+                  <p><video
+                        data-autoplay src="videos/se-im-42.webm" style="max-height:800px;"></video></p>
                   <small>Average iteration number per time step: 3.41</small>
                 </section>
                 <section>
                   With solid density equal to 1:      
-                  break again!
+                  breaks again!
                 </section>
                 <section>
                   <h2>Still not enough stability for strong coupling!</h2>
@@ -972,8 +975,8 @@
                 </section>
                 <section>
                   <small>With solid density equal to 1:</small>
-                  <p><a href="https://github.com/MakisH/ofw18-training/blob/master/videos/execution-serial-explicit.mp4"><video
-                        data-autoplay src="videos/se-im-const-1.webm" style="max-height:800px;"></video></a></p>
+                  <p><video
+                        data-autoplay src="videos/se-im-const-1.webm" style="max-height:800px;"></video></p>
                   <small>Average iteration number per time step: 5.27</small>
                 </section>
            
@@ -1046,36 +1049,36 @@
                   <table>
                     <tr>
                       <th></th>
-                      <th>density = 42</th>
-                      <th>density = 1</th>
+                      <th>d = 42</th>
+                      <th>d = 1</th>
                     </tr>
                     <tr>
                       <td>serial-explicit</td>
                       <td>div</td>
                       <td>div</td>
                     </tr>
-                    <tr>
-                      <td>se-implicit</td>
+                    <!-- <tr>
+                      <td>serial-implicit</td>
                       <td>3.41</td>
                       <td>div</td>
-                    </tr>
+                    </tr> -->
                     <tr>
-                      <td>se-im-const</td>
+                      <td>serial-implicit (const)</td>
                       <td>4.48</td>
                       <td>5.27</td>
                     </tr>
                     <tr>
-                      <td>se-im-Aitken</td>
+                      <td>serial-implicit (Aitken)</td>
                       <td>3.74</td>
-                      <td>5.3</td>
+                      <td>5.30</td>
                     </tr>
                     <tr> 
-                      <td>se-im-ILS</td>
+                      <td>serial-implicit (IQN)</td>
                       <td>2.95</td>
                       <td>3.07</td>
                     </tr>
                     <tr>
-                      <td>parallel-im-ILS</td>
+                      <td>parallel-implicit (IQN)</td>
                       <td>2.46</td>
                       <td>2.33</td>
                     </tr>

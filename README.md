@@ -1,14 +1,14 @@
-# OpenFOAM Workshop 2024 preCICE training slides
+# preCICE talk at the von Karman Institute for Fluid Dynamics
 
-- Title: Getting started with OpenFOAM-preCICE for FSI simulations
-- Speaker: Jun Chen, University of Stuttgart
-- Authors: Jun Chen, Gerasimos Chourdakis + [more](https://www.precice.org/about/)
-- Event: 19th [OpenFOAM Workshop](https://openfoamworkshop.org/), Beijing, China
-- Date: June 26, 2024
+- Title: Coupling OpenFOAM with external codes via preCICE
+- Speaker: Gerasimos Chourdakis, University of Stuttgart
+- Authors: Gerasimos Chourdakis, Jun Chen, + [more](https://www.precice.org/about/)
+- Event: [VKI OpenFOAM seminar](https://github.com/ofcourse-VKI/ofseminar/tree/master) - [announcement](https://events.vki.ac.be/index.php/von-karman-institute-events-and-lecture-series/free-openfoam-seminar-january-2025-gerasimos-chourdakis), online (Belgium)
+- Date: January 24, 2025
 
-[Start the presentation](https://makish.github.io/ofw19-training/) - [Get the PDF](https://github.com/MakisH/ofw18-training/blob/master/pdf-export/slides.pdf) (pending)
+[Start the presentation](https://makish.github.io/vki-training/) - [Get the PDF](https://github.com/MakisH/vki-training/blob/master/pdf-export/slides.pdf) (pending)
 
-This training session is an excerpt of the content typically discussed in the [preCICE Workshops](https://precice.org/community.html). Do you want more training for you, your university, or your company? Consider [supporting preCICE](https://precice.org/community-support-precice).
+This training session is an excerpt of the content typically discussed in the [preCICE Workshops](https://precice.org/precice-workshop.html). Do you want more training for you, your university, or your company? Consider [supporting preCICE](https://precice.org/community-support-precice).
 
 ## Build
 
@@ -33,7 +33,7 @@ docker run --rm -t --net=host -v "$(pwd)":/slides astefanutti/decktape generic -
 
 ## License & more
 
-- Based on the material of a related training session at the [OpenFOAM Workshop 2023](https://github.com/MakisH/ofw18-training)
+- Based on the material of a related training session at the [OpenFOAM Workshop 2024](https://github.com/MakisH/ofw19-training)
 - License: [CreativeCommons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
 - Based on [reveal.js](https://github.com/hakimel/reveal.js). Template based on the "White" template by Hakim El Hattab.
 - The University of Stuttgart logo is part of the corporate identity of the University of Stuttgart.
