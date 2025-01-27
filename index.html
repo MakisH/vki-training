@@ -272,7 +272,7 @@
                         mesh_name  = "Generator-Mesh"
                         
                         # Define the coupling mesh
-                        vertices   = [[1, y0] for y0 in y[:-1]]
+                        positions = [[1, y0] for y0 in y[:-1]]
                         vertex_ids = participant.set_mesh_vertices(mesh_name, positions)
                         
                         dt = 0.01
@@ -315,8 +315,8 @@
                         mesh_name = "Generator-Mesh"
                         
                         # Define the coupling mesh
-                        vertices = [[1, y0] for y0 in y[:-1]]
-                        vertex_ids = participant.set_mesh_vertices(mesh_name, vertices)
+                        positions  = [[1, y0] for y0 in y[:-1]]
+                        vertex_ids = participant.set_mesh_vertices(mesh_name, positions)
                         
                         participant.initialize()
 
@@ -362,8 +362,8 @@
                         mesh_name = "Generator-Mesh"
                         
                         # Define the coupling mesh
-                        vertices = [[1, y0] for y0 in y[:-1]]
-                        vertex_ids = participant.set_mesh_vertices(mesh_name, vertices)
+                        positions = [[1, y0] for y0 in y[:-1]]
+                        vertex_ids = participant.set_mesh_vertices(mesh_name, positions)
                         
                         participant.initialize()
 
@@ -411,8 +411,8 @@
                         mesh_name = "Generator-Mesh"
                         
                         # Define the coupling mesh
-                        vertices = [[1, y0] for y0 in y[:-1]]
-                        vertex_ids = participant.set_mesh_vertices(mesh_name, vertices)
+                        positions = [[1, y0] for y0 in y[:-1]]
+                        vertex_ids = participant.set_mesh_vertices(mesh_name, positions)
                         
                         participant.initialize()
 
@@ -460,8 +460,8 @@
                         mesh_name = "Generator-Mesh"
                         
                         # Define the coupling mesh
-                        vertices = [[1, y0] for y0 in y[:-1]]
-                        vertex_ids = participant.set_mesh_vertices(mesh_name, vertices)
+                        positions = [[1, y0] for y0 in y[:-1]]
+                        vertex_ids = participant.set_mesh_vertices(mesh_name, positions)
                         
                         participant.initialize()
 
@@ -509,8 +509,8 @@
                         mesh_name = "Generator-Mesh"
                         
                         # Define the coupling mesh
-                        vertices = [[1, y0] for y0 in y[:-1]]
-                        vertex_ids = participant.set_mesh_vertices(mesh_name, vertices)
+                        positions = [[1, y0] for y0 in y[:-1]]
+                        vertex_ids = participant.set_mesh_vertices(mesh_name, positions)
                         
                         participant.initialize()
 
@@ -559,8 +559,8 @@
                         mesh_name = "Generator-Mesh"
                         
                         # Define the coupling mesh
-                        vertices = [[1, y0] for y0 in y[:-1]]
-                        vertex_ids = participant.set_mesh_vertices(mesh_name, vertices)
+                        positions = [[1, y0] for y0 in y[:-1]]
+                        vertex_ids = participant.set_mesh_vertices(mesh_name, positions)
                         
                         participant.initialize()
                         precice_dt = participant.get_max_time_step_size()
@@ -619,8 +619,8 @@
                         mesh_name  = "Generator-Mesh"
                          
                         # Define the coupling mesh
-                        vertices   = [[1, y0] for y0 in y[:-1]]
-                        vertex_ids = participant.set_mesh_vertices(mesh_name, vertices)
+                        positions = [[1, y0] for y0 in y[:-1]]
+                        vertex_ids = participant.set_mesh_vertices(mesh_name, positions)
                         
 
 
@@ -676,11 +676,11 @@
                         mesh_name  = "Generator-Mesh"
                          
                         # Define the coupling mesh
-                        vertices   = [[1, y0] for y0 in y[:-1]]
-                        vertex_ids = participant.set_mesh_vertices(mesh_id, vertices)
+                        positions = [[1, y0] for y0 in y[:-1]]
+                        vertex_ids = participant.set_mesh_vertices(mesh_id, positions)
                         
                         # Get the exchanged data name
-                        data_name = "Data"
+                        data_name = "Color"
                         
                         participant.initialize()
 
